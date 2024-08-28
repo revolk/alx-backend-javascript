@@ -1,0 +1,39 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "extends": [
+    "airbnb-base"
+  ],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parserOptions": {
+    "ecmaVersion": 2018
+  },
+  "rules": {
+    "no-restricted-syntax": [
+      "off",
+      {
+        "selector": "ForOfStatement",
+        "message": "Iterators/generators require regenerator-runtime, which is too heavyweight for this guide to allow them. Prefer using array methods."
+      },
+      {
+        "selector": "LabeledStatement",
+        "message": "Labels are not allowed."
+      },
+      {
+        "selector": "WithStatement",
+        "message": "'with' statements are not allowed."
+      }
+    ],
+    "prefer-const": "warn",
+    "no-var": "error",
+    "prefer-arrow-callback": "warn",
+    "arrow-parens": ["error", "as-needed"],
+    "no-console": "off"
+  }
+}
+
